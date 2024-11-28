@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-size: larger;
+
+
+ 
+}
+*{
+
+  margin: 0;
+  padding: 0;
+}
+:root{
+
+  --primary-color:#F7CA00;
+  --primary-shade:#cfad15;
+}

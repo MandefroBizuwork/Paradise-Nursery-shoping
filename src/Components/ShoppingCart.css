@@ -1,0 +1,62 @@
+/* ./ShoppingCart.css */
+
+/* Main shopping cart container */
+.shopping-cart {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Shopping cart title */
+  .shopping-cart-title {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Cart items list */
+  .cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Individual cart item */
+  .cart-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Empty cart message */
+  .cart-empty {
+    text-align: center;
+    font-size: 16px;
+    color: #999;
+    margin: 20px 0;
+  }
+  
+  /* Clear cart button */
+  .clear-cart-btn {
+    display: block;
+    margin: 15px auto 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .clear-cart-btn:hover {
+    background-color: #c9302c;
+  }
+  

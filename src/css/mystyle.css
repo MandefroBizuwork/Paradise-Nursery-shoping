@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+
+    background-color: #CCCCCC;
+}
+.landing{
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 20px 10px;
+}
+
+.hero_container{
+  display: flex;
+  gap: 10px;
+  margin: 100px 20px;
+}
+
+.Getstarted{
+  max-width: 25%;
+}
+
+.about_section{
+  max-width: 75%;
+}
