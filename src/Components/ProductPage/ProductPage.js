@@ -15,7 +15,7 @@ function ProductPage() {
        
         {/* Product Card 1 */}
         <div className="max-w-sm bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center">
-          <img className="w-full h-48 object-contain " src={Logo} alt="Product" />
+          <img className="w-full h-48 object-cover " src={Logo} alt="Product" />
           <div className="p-6">
             <h2 className="text-2xl font-bold text-gray-800 mb-2">Product Title</h2>
             <p className="text-gray-600 mb-4">This is a simple description of the product. It summarizes the key features and benefits.</p>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from "../../images/logo.jpg";
 import Cart from "../../images/cart.svg";
+import { Link } from 'react-router-dom';
 
 function ProductHeader() {
   return (
@@ -21,7 +22,7 @@ function ProductHeader() {
 
       {/* Right Section: Cart */}
       <div className='text-white p-4 text-center w-full md:w-auto relative'>
-        <span className='cursor-pointer  hover:text-gray-300'><img className='h-10 ' src={Cart}/><span className=' text-center absolute left-9 top-1 bg-red-400 rounded-full pl-2 pr-2 '>0</span> </span>
+        <Link to='/Carts' className='cursor-pointer  hover:text-gray-300'><img className='h-10 ' src={Cart}/><span className=' text-center absolute left-9 top-1 bg-red-400 rounded-full pl-2 pr-2 '>0</span> </Link>
         
       </div>
     </div>
