@@ -28,8 +28,7 @@ function App() {
         <Route path="/ProductPage" element={<ProductPage/>}   />
     </Routes>
 
-    {/* <Footer/> */}
-
+    { <Footer/>}
 
 
 
