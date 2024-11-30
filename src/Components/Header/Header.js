@@ -3,11 +3,11 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 function Header() {
-  const cartItem = useSelector((state) => state.cart.cartItems);
+  const cartItem = useSelector((state) => state.myCart.cartItems);
   const totalItems = cartItem.reduce((total, item) => total + item.quantity, 0);
   return (
     <nav class="shadow-md  header">
-      <div class="container mx-auto px-4 flex items-center justify-between py-4">
+      <div class=" mx-auto px-4 flex items-center justify-between py-4">
         <a href="#" class="text-lg font-bold text-yellow-50 ">
           Paradise Nursery
         </a>

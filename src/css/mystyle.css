@@ -76,6 +76,23 @@ background-color: rgb(0, 0, 0,0.6);
 
   z-index:2 ;
   position: relative;
+}.Category_Container {  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Responsive grid */
+  margin: 100px auto; /* Center container vertically with margin */
+  justify-items: center; /* Align grid items to the center */
+  gap: 40px; /* Space between grid items */
+  max-width: 90%; /* Control maximum width of container */
 }
 
-
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .Category_Container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr)); /* Responsive grid */
+    margin: 100px auto; /* Center container vertically with margin */
+    justify-items: center; /* Align grid items to the center */
+    gap: 40px; /* Space between grid items */
+    max-width: 90%; /* Control maximum width of container */
+  }
+}

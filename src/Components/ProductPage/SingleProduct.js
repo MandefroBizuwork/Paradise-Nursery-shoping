@@ -3,14 +3,23 @@ import ProductHeader from "./ProductHeader";
 import { useDispatch } from "react-redux";
 import { products } from "./Productdb";
 import { addtoCart } from "../Redux/MyCartSlice";
+import { useParams } from "react-router-dom";
 
-function ProductPage() {
-  const [productList, setProductList] = useState(products); // Initialize with static products
+function SingleProduct() {
+  const { itemID } = useParams();
+  const [producDetail, setProducDetail] = useState([]);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Ensure consistent type comparison (string vs number)
+    const filteredProduct = products.filter(
+      (item) => item.id === Number(itemID)
+    );
+    setProducDetail(filteredProduct);
+  }, [itemID]);
 
   const handleAddtoCart = (item) => {
     dispatch(addtoCart(item));
-   
   };
 
   return (
@@ -18,19 +27,20 @@ function ProductPage() {
       <ProductHeader />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 my-6 mx-auto px-4">
-        {productList?.length === 0 ? (
-          <p className="text-center text-gray-500">No products available </p>
+        {producDetail.length === 0 ? (
+          <p className="text-center text-gray-500">No products available</p>
         ) : (
-          productList.map((item) => (
+          producDetail.map((item) => (
             <div
               key={item.id}
               className="max-w-sm bg-white rounded-lg shadow-lg overflow-hidden flex flex-col items-center"
             >
               <img
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-contain rounded-md transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-z-5 hover:rotate-1"
                 src={item.imageUrl}
                 alt={`Image of ${item.name}`}
               />
+
               <div className="p-6 flex items-center flex-col">
                 <h2 className="text-2xl font-bold text-gray-800 mb-2">
                   {item.name}
@@ -54,4 +64,4 @@ function ProductPage() {
   );
 }
 
-export default ProductPage;
+export default SingleProduct;

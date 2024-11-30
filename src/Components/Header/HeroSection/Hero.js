@@ -11,7 +11,7 @@ function Hero() {
         </h2>
         <Link
           className="rounded-md bg-green-500 px-7 py-2 hover:bg-green-700 text-center "
-          to="/ProductPage"
+          to="/category"
         >
           Get Started
         </Link>
@@ -28,6 +28,10 @@ function Hero() {
           air-purifying plants to aromatic fragrant ones, we have something for
           every plant enthusiast.
         </p>
+        <br/>
+       
+     
+
         <p>
           Our team of experts is dedicated to ensuring that each plant meets our
           strict standards of quality and care. Whether you're a seasoned

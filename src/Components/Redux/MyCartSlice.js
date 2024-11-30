@@ -6,7 +6,7 @@ const CartSlice = createSlice({
   },
   reducers: {
     addtoCart(state, action) {
-      const existingItem = state.cartItems.filter(
+      const existingItem = state.cartItems.find(
         (item) => item.id === action.payload.id
       );
       if (existingItem) {
@@ -17,7 +17,7 @@ const CartSlice = createSlice({
     },
 
     cartIncrement(state, action) {
-      const existingItem = state.cartItems.filter(
+      const existingItem = state.cartItems.find(
         (item) => item.id === action.payload
       );
       if (existingItem) {
@@ -25,7 +25,7 @@ const CartSlice = createSlice({
       }
     },
     cartDecrement(state, action) {
-      const existingItem = state.cartItems.filter(
+      const existingItem = state.cartItems.find(
         (item) => item.id === action.payload
       );
       if (existingItem && existingItem.quantity > 1) {
@@ -43,3 +43,6 @@ const CartSlice = createSlice({
   },
 });
 
+export const {addtoCart,cartIncrement,cartDecrement,removeFromcart,clearCart }= CartSlice.actions
+
+ export default CartSlice.reducer
